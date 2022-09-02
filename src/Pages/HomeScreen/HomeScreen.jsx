@@ -5,19 +5,14 @@ import './HomeScreen.css';
 
 
 const HomeScreen = () => {
-    const cat1 = {
-        title: 'Hommes',
-        image: './assets/images/man-cat.jpg',
-        description: 'La mode pour les hommes',
-    }
+    const tableau = [
+        {"id" : "1", "title" : "Hommes", "description" : "La mode pour les hommes", "image" : "./assets/images/man-cat.jpg"}, 
+        {"id" : "2", "title" : "Femmes", "description" : "La mode pour les femmes", "image" : "./assets/images/woman-cat.jpg"}, 
+        {"id" : "3", "title" : "Enfants", "description" : "La mode pour les enfants", "image" : "./assets/images/child-cat.jpg"}, 
+        {"id" : "4", "title" : "Bébés", "description" : "La mode pour les bébés", "image" : "./assets/images/baby-cat.jpg"}
+    ]
     
-    const cat2 = {
-        title: 'Femmes',
-        image: './assets/images/woman-cat.jpg',
-        description: 'La mode pour les femmes',
-    }
-    
-    
+    const catCards = tableau.map(category => <CategoryCard key={category.id} title={category.title} description = {category.description} image={category.image}/>)
     
     
     return (
@@ -25,8 +20,7 @@ const HomeScreen = () => {
             <h1>La boutique de Justine Vérin</h1>
             <div className="container">
                 <div className="row">
-                    <CategoryCard title={cat1.title} image={cat1.image} description={cat1.description}/>
-                    <CategoryCard title={cat2.title} image={cat2.image} description={cat2.description}/>
+                    {catCards}
                 </div>
             </div>
 
