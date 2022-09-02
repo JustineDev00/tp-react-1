@@ -1,13 +1,13 @@
 import React from 'react';
 import './CategoryCard.css';
-const CategoryCard = () => {
+const CategoryCard = ({title, image, description}) => {
     return (
         <div className="col-12 col-lg-3">
             <div className="card">
-                <img className="card-img-top" src="https://picsum.photos/200/300" alt="Title"/>
+                <img className="card-img-top" src={image} alt={title}/>
                 <div className="card-body">
-                    <h4 className="card-title text-start">Category title</h4>
-                    <p className="card-text text-start">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempore voluptates reprehenderit maiores natus? Accusantium tempore quidem doloribus explicabo consequatur nihil ratione fugiat, quisquam exercitationem numquam consectetur eveniet modi quam eligendi?</p>
+                    <h4 className="card-title text-start">{title}</h4>
+                    <p className="card-text text-start">{description}</p>
                 </div>
             </div>
 
