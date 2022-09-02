@@ -1,6 +1,6 @@
 
 import './App.css';
-import HomeScreen from './HomeScreen/HomeScreen';
+import HomeScreen from './Pages/HomeScreen/HomeScreen';
 
 function App() {
   return (
